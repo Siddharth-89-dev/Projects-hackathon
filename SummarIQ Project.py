@@ -1,7 +1,11 @@
 import streamlit as st
-import pyttsx3
 from googletrans import Translator
 import base64
+if summary and st.button("🔊 Listen"):
+    engine = pyttsx3.init()
+    engine.say(summary)
+    engine.runAndWait()
+
 import wikipediaapi
 
 wiki_wiki = wikipediaapi.Wikipedia('en')
