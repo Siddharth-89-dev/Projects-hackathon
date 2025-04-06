@@ -1,6 +1,12 @@
 import streamlit as st
-from googletrans import Translator
 import base64
+from deep_translator import GoogleTranslator
+
+
+if summary and st.button("🌐 Translate to Hindi"):
+    translated_text = GoogleTranslator(source='auto', target='hi').translate(summary)
+    st.info(translated_text)
+
 if summary and st.button("🔊 Listen"):
     engine = pyttsx3.init()
     engine.say(summary)
