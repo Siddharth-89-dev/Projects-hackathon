@@ -1,5 +1,5 @@
 import streamlit as st
-import wikipedia
+import wikipedia==1.4.0
 import pyttsx3
 from googletrans import Translator
 import base64
