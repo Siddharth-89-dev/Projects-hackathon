@@ -1,8 +1,13 @@
 import streamlit as st
-import wikipedia==1.4.0
 import pyttsx3
 from googletrans import Translator
 import base64
+import wikipediaapi
+
+wiki_wiki = wikipediaapi.Wikipedia('en')
+page = wiki_wiki.page("Python (programming language)")
+st.write(page.summary[0:300])
+
 
 # Set up page config
 st.set_page_config(page_title="SummarIQ", page_icon="🧠", layout="centered")
